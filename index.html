@@ -1,79 +1,70 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Responsive-design-testing : A simple HTML page to test out your responsive web design" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Responsive-design-testing</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/shahariaazam/Responsive-Design-Testing">View on GitHub</a>
-
-          <h1 id="project_title">Responsive-design-testing</h1>
-          <h2 id="project_tagline">A simple HTML page to test out your responsive web design</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/shahariaazam/Responsive-Design-Testing/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/shahariaazam/Responsive-Design-Testing/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Responsive design testing for the masses">
+    <title>Responsive Design Testing</title>
+    <style>
+        *{vertical-align:top;}
+        body{padding:20px;font-family:sans-serif;overflow-y:scroll;}
+        h2{margin:0 0 20px 0;}
+        span.small{font-size:60%;vertical-align:middle;}
+        #url{margin:0 0 20px 0px;display:block;}
+        #url input[type=text]{border:solid 1px #666;width:85%;margin:0 auto;font-size:2em;text-align:left;}
+        #url input[type=submit]{display:none;}
+        #url #options{float:right;line-height:25px;width:13%;}
+        #url #options input{margin-top:5px;}
+        #frames{overflow-x:scroll;width:100%;margin-bottom:10px;padding-bottom:20px;}
+        .frame{margin-right:20px;float:left;}
+        .frame:last-child{margin-right:0;}
+        .frame img{display:none;vertical-align:middle;}
+        iframe{border:solid 1px #000;}
+        .widthOnly {height:580px;}
+        .widthOnly h2 span{display:none;}
+        .widthOnly iframe{height:500px;}
+    </style>
+</head>
+<body id="container">
+<div id="url">
+    <form method="post">
+        <input type="text" placeholder="Test your own site... type the url and hit enter" />
+        <input type="submit" value="submit">
+        <div id="options">
+            <label for="normal"><input id="normal" type="radio" name="option" value="1" checked>Width only</label><br />
+            <label for="accurate"><input id="accurate" type="radio" name="option" value="2">Device sizes</label><br />
+            <label for="scrollbar"><input id="scrollbar" type="checkbox" name="scrollbar" value="1" checked>Visible Scrollbars</label>
+        </div>
+    </form>
+</div>
+<div id="frames" class="widthOnly">
+    <div id="inner">
+        <div id="f1" class="frame">
+            <h2>240<span> x 320</span> <span class="small">(small phone)</span> <img src="http://mattkersley.com/wp-content/themes/mattkersley/images/loader_large.gif" /></h2>
+            <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="255" height="320"></iframe>
+        </div>
+        <div id="f2" class="frame">
+            <h2>320<span> x 480</span> <span class="small">(iPhone)</span> <img src="http://mattkersley.com/wp-content/themes/mattkersley/images/loader_large.gif" /></h2>
+            <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="335" height="480"></iframe>
+        </div>
+        <div id="f3" class="frame">
+            <h2>480<span> x 640</span> <span class="small">(small tablet)</span> <img src="http://mattkersley.com/wp-content/themes/mattkersley/images/loader_large.gif" /></h2>
+            <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="495" height="640"></iframe>
+        </div>
+        <div id="f4" class="frame">
+            <h2>768<span> x 1024</span> <span class="small">(iPad - Portrait)</span> <img src="http://mattkersley.com/wp-content/themes/mattkersley/images/loader_large.gif" /></h2>
+            <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="783" height="1024"></iframe>
+        </div>
+        <div id="f5" class="frame">
+            <h2>1024<span> x 768</span> <span class="small">(iPad - Landscape)</span> <img src="http://mattkersley.com/wp-content/themes/mattkersley/images/loader_large.gif" /></h2>
+            <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="1039" height="768"></iframe>
+        </div>
     </div>
+</div>
+<span>A tool by <a href="http://mattkersley.com">Matt Kersley</a> - <a href="https://github.com/mattkersley/Responsive-Design-Testing">Fork it on Github</a></span><br />
+<span>Note: The content width may not be pixel perfect - I have added 15px to the iframes to cater for the scrollbars</span>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script src="js/responsive.js"></script>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Responsive-design-testing maintained by <a href="https://github.com/shahariaazam">shahariaazam</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
