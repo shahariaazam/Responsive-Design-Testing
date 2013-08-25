@@ -1,12 +1,8 @@
 /**
- * @Author  Matt Kersley
- * @URL http://mattkersley.com/
  *
- * @Description Test responsive website. This script was originally written by Matt Kersley
- *
- * @type {String}
+ * @Description Main Javascript for rendering page to test responsiveness
  */
-var defaultURL = 'blog.shahariaazam.com'; //<---- CHANGE TO YOUR WEBSITE URL
+var defaultURL = 'example.com'; //<---- CHANGE TO YOUR WEBSITE URL
 
 //show loading graphic
 function showLoader(id) {
