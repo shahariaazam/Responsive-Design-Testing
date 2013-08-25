@@ -1,3 +1,11 @@
+/**
+ * @Author  Matt Kersley
+ * @URL http://mattkersley.com/
+ *
+ * @Description Test responsive website. This script was originally written by Matt Kersley
+ *
+ * @type {String}
+ */
 var defaultURL = 'blog.shahariaazam.com'; //<---- CHANGE TO YOUR WEBSITE URL
 
 //show loading graphic
